@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 
 const Skinwalk = (maxSteps) => {
   const [position, setPosition] = useState({x: 0, y: 0});
@@ -6,8 +6,12 @@ const Skinwalk = (maxSteps) => {
   const [step, setStep] = useState(0)
 
   useEffect(() => {
-    var lastPosition = JSON.parse(localStorage.getItem("lastPosition"))
-    setPosition({...position, x:lastPosition.x , y:lastPosition.y})
+    let localStoragePositions= localStorage.getItem("lastPosition")
+    if(localStoragePositions){
+      var lastPosition = JSON.parse(localStorage.getItem("lastPosition"))
+      setPosition({...position, x:lastPosition.x , y:lastPosition.y})
+    }
+  
   }, [])
 
   const directions = {
