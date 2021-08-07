@@ -1,6 +1,6 @@
 ## HAFTA 4 - ÖDEV
 ### Boardgame App
->[Live]()
+>[Live](https://happy-ritchie-a0c523.netlify.app)
 
 -React Hooks
 
